@@ -1,0 +1,20 @@
+.cart {
+  display: flex;
+}
+
+.cart-imagen {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.cart-imagen:hover {
+  background-color: #d1d2d4;
+}
+
+.cart-cantidad {
+  margin-top: 1rem;
+  margin-right: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.8rem;
+}

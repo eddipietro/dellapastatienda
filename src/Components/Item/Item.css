@@ -1,0 +1,40 @@
+.card {
+    transition: box-shadow 0.3s;
+    border-radius:10px;
+    border: 0.3 #ccc;
+    background: #fff;
+    float: left;
+    width: 20rem;
+    margin: 0.5rem;
+  }
+  .card:hover {
+    box-shadow: 0 0 20px rgba(33,33,33,.33); 
+  }
+  .card-img {
+    width: 320px;
+    height: 420px;
+  }
+  .card-title {
+    color: rgb(214, 51, 51);
+    font-size: 1.5rem;
+  }
+  .card-precio {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .card-stock {
+    font-weight: bold;
+  }
+  
+  .card-amount {
+    color: rgb(214, 51, 51);
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .btn-dark:hover {
+    background-color: rgb(131, 12, 12);
+    border-color: rgb(131, 12, 12);
+  }
+  
