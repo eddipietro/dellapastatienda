@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProds } from "../../mocks/fakeApi";
 import ItemList from "../ItemList/ItemList.jsx";
-import espaguetis from '../../assets/img/espaguetis.gif'
 import "./ItemListContainer.css";
 import { db } from "../../firebase/firebase";
-import { getDocs, collection, query, where } from "firebase/firestore"
+import { getDocs, collection, query, where } from "firebase/firestore";
 
 const ItemListContainer = ({ mensaje }) => {
   const [productList, setProductList] = useState([]);
@@ -13,21 +12,23 @@ const ItemListContainer = ({ mensaje }) => {
 
   const { categoryId } = useParams();
   let productsConsult;
-  
 
   useEffect(() => {
 
-
-     const productsCollection = collection(db, 'productos');
-     if (categoryId) {
+    const productsCollection = collection(db, "productos");
       const productsQuery = query(
-        productsCollection,
-        where("categoria", "==", categoryId)
-      );
-      productsConsult = productsQuery;
-    } else {
-      productsConsult = productsCollection;
-    }
+      productsCollection,
+      where("categoria", "==", categoryId)
+    
+    
+    );
+  
+    
+if (categoryId) {
+productsConsult = productsQuery;
+} else {
+  productsConsult = productsCollection;  
+}
 
     getDocs(productsConsult)
       .then((result) => {
@@ -46,13 +47,16 @@ const ItemListContainer = ({ mensaje }) => {
         setLoading(false);
       });
   }, [categoryId]);
-  console.log(productList);
-  
+
   return (
     <>
       <h2>{mensaje} </h2>
       {loading ? (
-        <img src={espaguetis} className="gif" />
+        <div className="text-center">
+          <div className="spinner-border" role="status">
+            <span className="visually-hidden"></span>
+          </div>
+        </div>
       ) : (
         <>
           <ItemList productList={productList} />
