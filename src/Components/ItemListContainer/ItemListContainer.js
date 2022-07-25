@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getProds } from "../../mocks/fakeApi";
+
 import ItemList from "../ItemList/ItemList.jsx";
 import espaguetis from '../../assets/img/espaguetis.gif'
 import "./ItemListContainer.css";
@@ -13,13 +13,10 @@ const ItemListContainer = ({ mensaje }) => {
 
   const { categoryId } = useParams();
   let productsConsult;
-  
 
   useEffect(() => {
-
-
-     const productsCollection = collection(db, 'productos');
-     if (categoryId) {
+    const productsCollection = collection(db, "productos");
+    if (categoryId) {
       const productsQuery = query(
         productsCollection,
         where("categoria", "==", categoryId)
@@ -46,15 +43,20 @@ const ItemListContainer = ({ mensaje }) => {
         setLoading(false);
       });
   }, [categoryId]);
-  console.log(productList);
-  
+
   return (
     <>
       <h2>{mensaje} </h2>
       {loading ? (
         <img src={espaguetis} className="gif" />
+       
       ) : (
-        <>
+        <> 
+        <div className="text-center">
+          <div className="spinner-border" role="status">
+            <span className="visually-hidden"></span>
+          </div>
+        </div>,
           <ItemList productList={productList} />
         </>
       )}

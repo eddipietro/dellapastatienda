@@ -3,14 +3,15 @@ import "./ItemDetail.css";
 import { cartContext } from "../../context/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
+import espaguetis from '../../assets/img/espaguetis.gif'
 
 const ItemDetail = ({ product }) => {
-  const [buyfinalized, setBuyFinalized] = useState(false);
+  const [prodAdded, setProdAdded] = useState(false);
   const { addCartProduct } = useContext(cartContext);
 
   const onAdd = (amount) => {
     addCartProduct({ ...product, cantidad: amount });
-    setBuyFinalized(true);
+    setProdAdded(true);
   };
 
   return (
@@ -28,9 +29,10 @@ const ItemDetail = ({ product }) => {
           Stock: <span>{product.stock}</span>
         </p>
         <div>
-          {buyfinalized ? (
+          {prodAdded ? (
+            <img src={espaguetis} className="gif" />,
             <Link to="/cart">
-              <button className="btn btn-dark">Finalizar la Compra</button>
+              <button className="btn btn-dark">Ver Carrito</button>
             </Link>
           ) : (
             <ItemCount stock={product.stock} onAdd={onAdd} />
