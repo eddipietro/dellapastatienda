@@ -1,10 +1,16 @@
+
+#DellaPasta
+
+##Proyecto final de E-commerce en React 
+
+###El cual es una tienda sobre una fábrica de pastas artesanales
+
 >Link del Sitio Web
 [Della Pasta Tienda](https://dellapasta.netlify.app/#/ )
 
 >Presentación
-#DellaPasta
-##Proyecto final de E-commerce en React 
-###El cual es una tienda sobre una fábrica de pastas artesanales
+
+
 
 [Della Pasta](https://dellapasta.netlify.app/#/ )
 ![web site Della Pasta](./public/website.jpg)
