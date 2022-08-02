@@ -20,6 +20,21 @@
     margin-right: 0.3rem;
   }
   
+  .btnX {
+   color: rgb(214, 51, 51);
+   background-color: rgb(160, 157, 157);
+   font-weight: bold;
+   position: center;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 10px;
+  box-shadow: none;
+  width: 45px;
+  height: 45px;
+  line-height: 42px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+  }
   .btn-dark:hover {
     background-color: rgb(131, 12, 12);
     border-color: rgb(131, 12, 12);

@@ -20,9 +20,9 @@ const Item = ({ product }) => {
               <p className="card-sinstock">Producto sin Stock</p>
             </div>
           ) : (
-            <div className="d-flex flex-row align-item-center justify-content-center">
+            <div className="d-grid gap-2">
               <Link to={`/detail/${product.id}`}>
-                <button className="btn btn-dark">Ver Detalle</button>
+                <button className="btn btn-10">Ver Detalle</button>
               </Link>
             </div>
           )}

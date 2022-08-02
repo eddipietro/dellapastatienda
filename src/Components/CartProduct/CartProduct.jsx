@@ -25,7 +25,7 @@ const CartProduct = ({ product }) => {
       <p className="product-text">
         <button
           onClick={() => deleteCartProduct(product.id)}
-          className="btn btn-dark"
+          className="btnX btn-dark"
         >
           X
         </button>

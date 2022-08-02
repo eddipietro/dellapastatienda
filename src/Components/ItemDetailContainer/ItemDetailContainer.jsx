@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getProd } from "../../mocks/fakeApi";
+
 import ItemDetail from "../ItemDetail/ItemDetail";
-import espaguetis from '../../assets/img/espaguetis.gif'
+
 import '../ItemDetailContainer/itemDetailContainer.css'
 import { db } from "../../firebase/firebase";
 import { doc, getDoc, collection } from "firebase/firestore";
@@ -34,7 +34,7 @@ const ItemDetailContainer = () => {
   return (
     <div>
       {loading ? (
-        <img src={espaguetis} className="gif" />
+        <img src="espaguetis.gif" className="gif" />
       ) : (
         <>
           <div className="container">

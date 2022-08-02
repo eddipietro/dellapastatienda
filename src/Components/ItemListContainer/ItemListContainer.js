@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
 import ItemList from "../ItemList/ItemList.jsx";
-import espaguetis from '../../assets/img/espaguetis.gif'
+
 import "./ItemListContainer.css";
 import { db } from "../../firebase/firebase";
 import { getDocs, collection, query, where } from "firebase/firestore"
@@ -46,9 +45,9 @@ const ItemListContainer = ({ mensaje }) => {
 
   return (
     <>
-      <h2>{mensaje} </h2>
+      <h2 className="reboteIn_izquierda">{mensaje} </h2>
       {loading ? (
-        <img src={espaguetis} className="gif" />
+        <img src="espaguetis.gif" className="gif" />
        
       ) : (
         <> 

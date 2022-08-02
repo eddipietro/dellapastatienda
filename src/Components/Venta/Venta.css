@@ -2,3 +2,7 @@
     width: 800px;
     margin: auto;
   }
+  .mb-3 {
+    padding: 5px;
+    border-radius: 5px;
+  }

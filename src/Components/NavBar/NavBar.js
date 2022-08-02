@@ -2,7 +2,7 @@ import React from "react";
 import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
-import logo from '../../assets/img/logo.jpg'
+
 
 const categories = [
 
@@ -38,7 +38,7 @@ const NavBar = () => {
     <section className="boxnav">
     
        <Link  to="/">   
-          <img className="img-logo" src={logo} />
+          <img className="img-logo" src="logo.jpg"/>
           </Link>
 
       <div className="nav-items">

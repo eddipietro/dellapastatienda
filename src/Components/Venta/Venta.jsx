@@ -104,7 +104,7 @@ const Venta = () => {
               required
             />
           </div>
-          <button className="btn btn-dark">Enviar Compra</button>
+          <button className="btn btn-10">Enviar Compra</button>
         </form>
       </div>
     </div>

@@ -1,6 +1,59 @@
 h2 {
-  color: rgb(214, 51, 51);
+  color: rgb(255, 255, 255);
   padding-top: 1.5rem;
   padding-bottom: 1.3rem;
   text-align: center;
+  font-weight: bold;
+  -webkit-text-stroke: 2px black;
+  font-size: 50px;
 }
+
+.reboteIn_izquierda {
+  
+  font-family: Arial;
+  background-image: url("https://i.postimg.cc/6qtnbyc4/banner.jpg");
+  opacity: 0.8;
+  position: relative;
+  margin: 50px 50px;
+  line-height: 150px;
+  
+}
+
+/* Asignamos las animaciones */
+
+.reboteIn_izquierda {
+ 
+  animation: reboteIn_izquierda 3s 2;
+ 
+}
+
+
+
+/* Creamos la animación ReboteIn Izquierda (con keyframes) */
+
+@keyframes reboteIn_izquierda {
+ 
+  0% {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+  
+  50% {
+    
+    transform: translateX(30px);
+    opacity: 1;
+  }
+  
+  70% {
+    
+    transform: translateX(-10px);
+      
+  }
+  
+}
+
+
+  
+
+
+

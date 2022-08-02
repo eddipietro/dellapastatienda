@@ -3,7 +3,7 @@ import "./ItemDetail.css";
 import { cartContext } from "../../context/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
-import espaguetis from '../../assets/img/espaguetis.gif'
+
 
 const ItemDetail = ({ product }) => {
   const [prodAdded, setProdAdded] = useState(false);
@@ -30,9 +30,9 @@ const ItemDetail = ({ product }) => {
         </p>
         <div>
           {prodAdded ? (
-            <img src={espaguetis} className="gif" />,
+            <img src="espaguetis.gif" className="gif" />,
             <Link to="/cart">
-              <button className="btn btn-dark">Ver Carrito</button>
+              <button className="btn btn-10">Ver Carrito</button>
             </Link>
           ) : (
             <ItemCount stock={product.stock} onAdd={onAdd} />
