@@ -1,9 +1,10 @@
 
+
 >Presentación
 #DellaPasta
 ##Proyecto final de E-commerce en React 
 ###El cual es una tienda sobre una fábrica de pastas artesanales
-aca deberia poner un gif o img de la vista previa de sitio web
+
 [dellapasta](url de la pagina )
 ![web site dellapasta](./public/website.jpg)
 
